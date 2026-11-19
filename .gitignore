@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtuelle Umgebungen
+.venv/
+venv/
+env/
+
+# Lokale Entwicklungsdateien
+.idea/
+.vscode/
+*.log
+
+# Rohdaten und große Bilddateien
+raw_data/**/*.jpg
+raw_data/**/*.jpeg
+raw_data/**/*.png
+raw_data/**/*.webp
+dataset/images/**/*.jpg
+dataset/images/**/*.jpeg
+dataset/images/**/*.png
+dataset/images/**/*.webp
+models/*.pt
+results/*.png
+
+# Betriebssystemdateien
+.DS_Store
+Thumbs.db
