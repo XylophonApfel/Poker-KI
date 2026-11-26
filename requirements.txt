@@ -1,9 +1,12 @@
-ultralytics==8.3.0
-albumentations==1.4.18
-opencv-python==4.10.0.84
-numpy==2.1.1
-pandas==2.2.3
-scikit-learn==1.5.2
-matplotlib==3.9.2
-seaborn==0.13.2
-Pillow==10.4.0
+# Installation: pip install -r requirements.txt
+# NVIDIA-GPU? Vorher PyTorch mit CUDA installieren (siehe README).
+ultralytics>=8.3,<9
+albumentations>=2.0,<3
+opencv-python>=4.9
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+Pillow
+pyyaml

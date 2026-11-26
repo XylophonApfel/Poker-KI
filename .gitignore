@@ -4,26 +4,48 @@ __pycache__/
 
 # Virtuelle Umgebungen
 .venv/
+.venv-ls/
 venv/
 env/
+wheels/
 
 # Lokale Entwicklungsdateien
 .idea/
 .vscode/
 *.log
 
-# Rohdaten und große Bilddateien
+# Fotos: NICHT ins Repo (zu gross, langsames Internet).
+# Austausch per USB-Stick / Cloud-Ordner.
 raw_data/**/*.jpg
+raw_data/**/*.JPG
 raw_data/**/*.jpeg
+raw_data/**/*.JPEG
 raw_data/**/*.png
+raw_data/**/*.PNG
+raw_data/**/*.heic
+raw_data/**/*.HEIC
 raw_data/**/*.webp
-dataset/images/**/*.jpg
-dataset/images/**/*.jpeg
-dataset/images/**/*.png
-dataset/images/**/*.webp
+raw_data/**/*.zip
+# Erlaubt (klein, nuetzlich zum Austausch): raw_data/serien.csv und
+# raw_data/labels_raw/**/*.txt (Label-Studio-Export, nur Text)
+
+# Erzeugter Datensatz: wird mit split_dataset.py + augment.py jederzeit neu gebaut
+dataset/images/**
+dataset/labels/**
+!dataset/images/**/
+!dataset/labels/**/
+!dataset/**/.gitkeep
+dataset/split_info.csv
+dataset/**/*.cache
+
+# Modelle und Trainingslaeufe
 models/*.pt
-results/*.png
+*.pt
+results/train/
+results/augment_preview/
+results/evaluation/yolo_test/
 
 # Betriebssystemdateien
 .DS_Store
 Thumbs.db
+desktop.ini
