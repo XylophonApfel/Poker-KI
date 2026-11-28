@@ -1,7 +1,8 @@
 """Gemeinsame Einstellungen fuer alle Skripte (Pfade und die 52 Klassen).
 
 Klassennamen laut Drehbuch: farbe_wert, klein, ohne Umlaute.
-Feste Reihenfolge: Kreuz, Pik, Herz, Karo, jeweils 2 ... Ass  ->  IDs 0 ... 51.
+Die Reihenfolge der IDs 0 ... 51 wird direkt aus Label Studios classes.txt
+uebernommen, damit die Label-Dateien und data.yaml exakt uebereinstimmen.
 """
 from pathlib import Path
 
@@ -19,8 +20,23 @@ PARTS = ("train", "val", "test")
 
 FARBEN = ["kreuz", "pik", "herz", "karo"]
 WERTE = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "bube", "dame", "koenig", "ass"]
-CLASSES = [f"{f}_{w}" for f in FARBEN for w in WERTE]   # 0: kreuz_2 ... 51: karo_ass
-assert len(CLASSES) == 52
+
+# Klassenreihenfolge direkt aus Label Studios classes.txt laden
+CLASSES_FILE = RAW / "classes.txt"
+if not CLASSES_FILE.exists():
+    CLASSES_FILE = LABELS_RAW / "classes.txt"
+
+if CLASSES_FILE.exists():
+    CLASSES = [
+        z.strip()
+        for z in CLASSES_FILE.read_text(encoding="utf-8").splitlines()
+        if z.strip()
+    ]
+else:
+    # Fallback auf Drehbuch-Reihenfolge, falls noch keine classes.txt existiert
+    CLASSES = [f"{f}_{w}" for f in FARBEN for w in WERTE]
+
+assert len(CLASSES) == 52, f"Erwartet 52 Klassen, gefunden: {len(CLASSES)}"
 
 
 def list_images(folder: Path, recursive: bool = False):

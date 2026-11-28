@@ -1,0 +1,64 @@
+Modell: C:\Users\lanze\OneDrive\Desktop\Schule\KI\poker-ki\models\best.pt | Schwelle conf=0.6 | IoU=0.5
+Testbilder: 33 | markierte Karten: 108 | nicht erkannt: 40 | Fehlalarme: 17
+Accuracy gesamt (richtig erkannte / alle markierten Karten): 0.204
+Precision makro: 0.226 | Recall makro: 0.157 | F1 makro: 0.178
+mAP50 (test): 0.195 | mAP50-95 (test): 0.115
+
+              precision    recall  f1-score   support
+
+     herz_10      0.500     0.333     0.400         3
+      herz_2      0.500     0.500     0.500         2
+      herz_3      0.000     0.000     0.000         3
+      herz_4      0.000     0.000     0.000         2
+      herz_5      0.000     0.000     0.000         0
+      herz_6      0.400     0.500     0.444         4
+      herz_7      0.000     0.000     0.000         2
+      herz_8      0.000     0.000     0.000         3
+      herz_9      0.200     0.333     0.250         3
+    herz_ass      0.000     0.000     0.000         1
+   herz_bube      0.000     0.000     0.000         2
+   herz_dame      0.500     0.500     0.500         2
+ herz_koenig      0.500     0.333     0.400         3
+     karo_10      0.000     0.000     0.000         1
+      karo_2      0.500     0.333     0.400         3
+      karo_3      1.000     0.250     0.400         4
+      karo_4      0.000     0.000     0.000         3
+      karo_5      0.000     0.000     0.000         1
+      karo_6      0.000     0.000     0.000         3
+      karo_7      0.333     0.333     0.333         3
+      karo_8      0.500     0.333     0.400         3
+      karo_9      0.000     0.000     0.000         3
+    karo_ass      0.000     0.000     0.000         1
+   karo_bube      0.500     0.500     0.500         2
+   karo_dame      0.500     0.333     0.400         3
+ karo_koenig      0.333     0.250     0.286         4
+    kreuz_10      1.000     0.500     0.667         2
+     kreuz_2      0.000     0.000     0.000         2
+     kreuz_3      0.000     0.000     0.000         3
+     kreuz_4      0.000     0.000     0.000         3
+     kreuz_5      0.000     0.000     0.000         1
+     kreuz_6      0.000     0.000     0.000         4
+     kreuz_7      1.000     0.500     0.667         2
+     kreuz_8      0.000     0.000     0.000         0
+     kreuz_9      0.000     0.000     0.000         1
+   kreuz_ass      0.000     0.000     0.000         1
+  kreuz_bube      0.000     0.000     0.000         0
+  kreuz_dame      1.000     0.667     0.800         3
+kreuz_koenig      0.500     0.500     0.500         2
+      pik_10      0.000     0.000     0.000         3
+       pik_2      0.000     0.000     0.000         0
+       pik_3      0.000     0.000     0.000         1
+       pik_4      0.000     0.000     0.000         1
+       pik_5      0.000     0.000     0.000         2
+       pik_6      0.000     0.000     0.000         0
+       pik_7      0.000     0.000     0.000         2
+       pik_8      1.000     0.333     0.500         3
+       pik_9      0.500     0.333     0.400         3
+     pik_ass      0.000     0.000     0.000         1
+    pik_bube      0.000     0.000     0.000         1
+    pik_dame      0.500     0.500     0.500         2
+  pik_koenig      0.000     0.000     0.000         1
+
+   micro avg      0.259     0.204     0.228       108
+   macro avg      0.226     0.157     0.178       108
+weighted avg      0.301     0.204     0.232       108
